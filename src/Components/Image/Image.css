@@ -1,0 +1,5 @@
+.Image {
+  height: auto;
+  width: 200px;
+  box-shadow: var(--glass-shadow);
+}

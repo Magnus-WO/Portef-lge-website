@@ -1,0 +1,25 @@
+.landingPageContainer {
+  height: 100dvh;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.landingPageHeader {
+  margin: var(--space-lg) 0px;
+}
+
+.landingPageInfoSection {
+  /* background-color: green; */
+
+  font-size: var(--font-size-lg);
+}
+
+.infoContainer {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  /* background-color: aliceblue; */
+}
