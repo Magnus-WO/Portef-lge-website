@@ -1,10 +1,6 @@
 import "./Container.css";
 
-export default function Container({ as, children, className, data }) {
+export default function Container({ as, children, className }) {
   const Element = as;
-  return (
-    <Element className={`Container ${className}`} data-theme={data}>
-      {children}
-    </Element>
-  );
+  return <Element className={`Container ${className}`}>{children}</Element>;
 }

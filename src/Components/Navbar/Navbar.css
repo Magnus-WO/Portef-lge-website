@@ -1,0 +1,59 @@
+.Navbar {
+  background: var(--glass-background);
+  box-shadow: var(--glass-shadow);
+  border: var(--glass-border);
+  border-radius: var(--glass-radius);
+
+  backdrop-filter: var(--glass-blur) var(--glass-saturation);
+
+  -webkit-backdrop-filter: var(--glass-blur) var(--glass-saturation);
+
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: fit-content;
+  padding: var(--space-xs) var(--space-md);
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+
+    li {
+      list-style: none;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-color-main);
+        text-decoration: none;
+        gap: var(--space-xs);
+      }
+    }
+  }
+  .NavbarIcon {
+    box-shadow: none;
+    filter: var(--icons-color);
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .Navbar {
+    padding: var(--space-xs);
+    left: 90%;
+
+    ul {
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .NavbarIcon {
+      width: 40px;
+    }
+  }
+}
