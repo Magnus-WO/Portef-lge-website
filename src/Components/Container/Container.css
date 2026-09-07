@@ -1,4 +1,5 @@
 .Container {
   inline-size: min(860px, 96%);
   margin-inline: auto;
+  position: relative;
 }

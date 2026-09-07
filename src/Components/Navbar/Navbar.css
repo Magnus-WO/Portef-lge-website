@@ -8,14 +8,15 @@
 
   -webkit-backdrop-filter: var(--glass-blur) var(--glass-saturation);
 
-  position: sticky;
-  /* top: 100%; */
-  bottom: 0;
+  position: fixed;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 
   width: fit-content;
   padding: var(--space-xs) var(--space-md);
+
   ul {
     display: flex;
     width: 100%;
@@ -53,10 +54,12 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 700px) {
   .Navbar {
     padding: var(--space-xs);
     left: 90%;
+    position: fixed;
+    bottom: 10%;
 
     ul {
       flex-direction: column;

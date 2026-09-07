@@ -1,9 +1,9 @@
 :root {
-  --space-xl: 128px;
-  --space-lg: 64px;
-  --space-md: 32px;
-  --space-sm: 16px;
-  --space-xs: 8px;
+  --space-xl: 8rem;
+  --space-lg: 4rem;
+  --space-md: 2rem;
+  --space-sm: 1rem;
+  --space-xs: 0.5rem;
 
   --font-size-xl: 2.2rem;
   --font-size-lg: 1.2rem;
@@ -13,9 +13,6 @@
 
   --border-radius: 12px;
   --box-shadow: 10px 10px 30px black;
-  --glass-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.4),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="light"] {
@@ -55,6 +52,59 @@
   --glass-blur: blur(28px);
   --glass-saturation: saturate(160%);
   --glass-radius: 24px;
+
+  /* Button */
+  --glass-btn-background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 0.55),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.48),
+      rgba(220, 218, 216, 0.28)
+    );
+
+  --glass-btn-shadow:
+    0 8px 24px rgba(40, 35, 30, 0.12), 0 2px 6px rgba(40, 35, 30, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.12),
+    inset 0 0 12px rgba(255, 255, 255, 0.12);
+
+  --glass-btn-border: 1px solid rgba(255, 255, 255, 0.55);
+
+  --glass-btn-blur: blur(20px);
+  --glass-btn-saturation: saturate(180%);
+  --glass-btn-radius: 14px;
+
+  /* Button hover & active */
+  --glass-btn-hover-background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 0.68),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.58),
+      rgba(220, 218, 216, 0.34)
+    );
+
+  --glass-btn-hover-shadow:
+    0 10px 28px rgba(40, 35, 30, 0.14), 0 3px 8px rgba(40, 35, 30, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 0 16px rgba(255, 255, 255, 0.14);
+
+  --glass-btn-active-background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.38),
+    rgba(210, 208, 206, 0.26)
+  );
+
+  --glass-btn-active-shadow:
+    0 3px 10px rgba(40, 35, 30, 0.12), inset 0 2px 3px rgba(40, 35, 30, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 
 [data-theme="dark"] {
@@ -95,6 +145,59 @@
   --glass-blur: blur(28px);
   --glass-saturation: saturate(160%);
   --glass-radius: 24px;
+
+  /* Button */
+  --glass-btn-background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 0.22),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(180, 175, 205, 0.12)
+    );
+
+  --glass-btn-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.08),
+    inset 0 0 12px rgba(255, 255, 255, 0.045);
+
+  --glass-btn-border: 1px solid rgba(255, 255, 255, 0.24);
+
+  --glass-btn-blur: blur(20px);
+  --glass-btn-saturation: saturate(180%);
+  --glass-btn-radius: 14px;
+
+  /* Button hover & active */
+  --glass-btn-hover-background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 0.27),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.19),
+      rgba(180, 175, 205, 0.14)
+    );
+
+  --glass-btn-hover-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.34), 0 3px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.34),
+    inset 0 0 16px rgba(255, 255, 255, 0.055);
+
+  --glass-btn-active-background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.11),
+    rgba(180, 175, 205, 0.08)
+  );
+
+  --glass-btn-active-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.28), inset 0 2px 3px rgba(0, 0, 0, 0.16),
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
 }
 
 *,
@@ -113,5 +216,4 @@ html {
 body {
   background-color: var(--background-color-1);
   color: var(--text-color-main);
-  position: relative;
 }

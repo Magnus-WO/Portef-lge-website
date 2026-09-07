@@ -1,0 +1,41 @@
+.Button {
+  background-color: var(--glass-btn-background);
+  color: var(--text-color-main);
+  padding: var(--space-sm) var(--space-sm);
+
+  box-shadow: var(--glass-btn-shadow);
+  border: var(--glass-btn-border);
+  border-radius: var(--glass-btn-radius);
+  backdrop-filter: var(--glass-btn-blur) var(--glass-btn-saturation);
+  -webkit-backdrop-filter: var(--glass-btn-blur) var(--glass-btn-saturation);
+}
+
+.Button:hover {
+  cursor: pointer;
+  background-color: var(--glass-btn-hover-background);
+  box-shadow: var(--glass-btn-hover-shadow);
+}
+
+.Button:active {
+  background-color: var(--glass-btn-active-background);
+  box-shadow: var(--glass-btn-active-shadow);
+}
+
+.buttonIcon {
+  width: 20px;
+  box-shadow: none;
+  filter: var(--icons-color);
+}
+
+.themeButton {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+
+@media screen and (max-width: 700px) {
+  .themeButton {
+    right: 5%;
+    top: 12%;
+  }
+}
