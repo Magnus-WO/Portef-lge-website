@@ -1,3 +1,13 @@
+@font-face {
+  font-family: pixel;
+  src: url(./assets/fonts/Pixel-Regular.ttf);
+}
+
+@font-face {
+  font-family: patrickHand;
+  src: url(./assets/fonts/PatrickHand-Regular.ttf);
+}
+
 :root {
   --space-xl: 8rem;
   --space-lg: 4rem;
@@ -13,193 +23,195 @@
 
   --border-radius: 12px;
   --box-shadow: 10px 10px 30px black;
-}
 
-[data-theme="light"] {
-  --background-color-1: #eae8e6;
-  --background-color-opposite-theme: #2e293a;
-  --highlight-background-color: #4969c1;
-  --highlight-color: #dde0e6;
-  --highlight-color-safe: #39d612;
-  --highlight-color-warning: #dc2e2e;
+  --font-header: pixel;
+  --font-body: patrickHand;
 
-  --text-color-main: #464b58;
-  --text-color-secondary: #4a4f5a;
-  --text-color-tertiary: #7a808e;
-  --icons-color: brightness(0) saturate(100%) invert(30%) sepia(14%)
-    saturate(492%) hue-rotate(186deg) brightness(93%) contrast(96%);
+  [data-theme="light"] {
+    --background-color-1: #eae8e6;
+    --background-color-opposite-theme: #2e293a;
+    --highlight-background-color: #4969c1;
+    --highlight-color: #dde0e6;
+    --highlight-color-safe: #39d612;
+    --highlight-color-warning: #dc2e2e;
 
-  /* Glass */
-  --glass-background:
-    radial-gradient(
-      circle at 20% 0%,
+    --text-color-main: #464b58;
+    --text-color-secondary: #4a4f5a;
+    --text-color-tertiary: #7a808e;
+    --icons-color: brightness(0) saturate(100%) invert(30%) sepia(14%)
+      saturate(492%) hue-rotate(186deg) brightness(93%) contrast(96%);
+
+    /* Glass */
+    --glass-background:
+      radial-gradient(
+        circle at 20% 0%,
+        rgba(255, 255, 255, 0.38),
+        transparent 45%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.42),
+        rgba(220, 218, 216, 0.22)
+      );
+
+    --glass-shadow:
+      0 12px 40px rgba(40, 35, 30, 0.14), 0 2px 8px rgba(40, 35, 30, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.65),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+
+    --glass-border: 1px solid rgba(255, 255, 255, 0.45);
+
+    --glass-blur: blur(28px);
+    --glass-saturation: saturate(160%);
+    --glass-radius: 24px;
+
+    /* Button */
+    --glass-btn-background:
+      radial-gradient(
+        circle at 25% 0%,
+        rgba(255, 255, 255, 0.55),
+        transparent 55%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.48),
+        rgba(220, 218, 216, 0.28)
+      );
+
+    --glass-btn-shadow:
+      0 8px 24px rgba(40, 35, 30, 0.12), 0 2px 6px rgba(40, 35, 30, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.8),
+      inset 0 -1px 1px rgba(255, 255, 255, 0.12),
+      inset 0 0 12px rgba(255, 255, 255, 0.12);
+
+    --glass-btn-border: 1px solid rgba(255, 255, 255, 0.55);
+
+    --glass-btn-blur: blur(20px);
+    --glass-btn-saturation: saturate(180%);
+    --glass-btn-radius: 14px;
+
+    /* Button hover & active */
+    --glass-btn-hover-background:
+      radial-gradient(
+        circle at 25% 0%,
+        rgba(255, 255, 255, 0.68),
+        transparent 55%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.58),
+        rgba(220, 218, 216, 0.34)
+      );
+
+    --glass-btn-hover-shadow:
+      0 10px 28px rgba(40, 35, 30, 0.14), 0 3px 8px rgba(40, 35, 30, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.9),
+      inset 0 0 16px rgba(255, 255, 255, 0.14);
+
+    --glass-btn-active-background: linear-gradient(
+      135deg,
       rgba(255, 255, 255, 0.38),
-      transparent 45%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.42),
-      rgba(220, 218, 216, 0.22)
+      rgba(210, 208, 206, 0.26)
     );
 
-  --glass-shadow:
-    0 12px 40px rgba(40, 35, 30, 0.14), 0 2px 8px rgba(40, 35, 30, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.65),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
+    --glass-btn-active-shadow:
+      0 3px 10px rgba(40, 35, 30, 0.12), inset 0 2px 3px rgba(40, 35, 30, 0.08),
+      inset 0 1px 1px rgba(255, 255, 255, 0.55);
+  }
 
-  --glass-border: 1px solid rgba(255, 255, 255, 0.45);
+  [data-theme="dark"] {
+    --background-color-1: #2e293a;
+    --background-color-opposite-theme: #eae8e6;
+    --highlight-background-color: #5b4965;
+    --highlight-color: #34c60f;
+    --highlight-color-safe: #34c60f;
+    --highlight-color-warning: #c60f0f;
 
-  --glass-blur: blur(28px);
-  --glass-saturation: saturate(160%);
-  --glass-radius: 24px;
+    --text-color-main: #bfb4c4;
+    --text-color-secondary: #5b4965;
+    --text-color-tertiary: #583e85;
 
-  /* Button */
-  --glass-btn-background:
-    radial-gradient(
-      circle at 25% 0%,
-      rgba(255, 255, 255, 0.55),
-      transparent 55%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.48),
-      rgba(220, 218, 216, 0.28)
-    );
+    --icons-color: brightness(0) saturate(100%) invert(82%) sepia(7%)
+      saturate(404%) hue-rotate(237deg) brightness(89%) contrast(89%);
 
-  --glass-btn-shadow:
-    0 8px 24px rgba(40, 35, 30, 0.12), 0 2px 6px rgba(40, 35, 30, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.12),
-    inset 0 0 12px rgba(255, 255, 255, 0.12);
+    /* Liquid glass */
+    --glass-background:
+      radial-gradient(
+        circle at 20% 0%,
+        rgba(255, 255, 255, 0.14),
+        transparent 45%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.11),
+        rgba(180, 175, 205, 0.08)
+      );
 
-  --glass-btn-border: 1px solid rgba(255, 255, 255, 0.55);
+    --glass-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.38), 0 2px 8px rgba(0, 0, 0, 0.22),
+      inset 0 1px 1px rgba(255, 255, 255, 0.22),
+      inset 0 0 20px rgba(255, 255, 255, 0.035);
 
-  --glass-btn-blur: blur(20px);
-  --glass-btn-saturation: saturate(180%);
-  --glass-btn-radius: 14px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
 
-  /* Button hover & active */
-  --glass-btn-hover-background:
-    radial-gradient(
-      circle at 25% 0%,
-      rgba(255, 255, 255, 0.68),
-      transparent 55%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.58),
-      rgba(220, 218, 216, 0.34)
-    );
+    --glass-blur: blur(28px);
+    --glass-saturation: saturate(160%);
+    --glass-radius: 24px;
 
-  --glass-btn-hover-shadow:
-    0 10px 28px rgba(40, 35, 30, 0.14), 0 3px 8px rgba(40, 35, 30, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.9),
-    inset 0 0 16px rgba(255, 255, 255, 0.14);
+    /* Button */
+    --glass-btn-background:
+      radial-gradient(
+        circle at 25% 0%,
+        rgba(255, 255, 255, 0.22),
+        transparent 55%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(180, 175, 205, 0.12)
+      );
 
-  --glass-btn-active-background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.38),
-    rgba(210, 208, 206, 0.26)
-  );
+    --glass-btn-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.18),
+      inset 0 1px 1px rgba(255, 255, 255, 0.3),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.08),
+      inset 0 0 12px rgba(255, 255, 255, 0.045);
 
-  --glass-btn-active-shadow:
-    0 3px 10px rgba(40, 35, 30, 0.12), inset 0 2px 3px rgba(40, 35, 30, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.55);
-}
+    --glass-btn-border: 1px solid rgba(255, 255, 255, 0.24);
 
-[data-theme="dark"] {
-  --background-color-1: #2e293a;
-  --background-color-opposite-theme: #eae8e6;
-  --highlight-background-color: #5b4965;
-  --highlight-color: #34c60f;
-  --highlight-color-safe: #34c60f;
-  --highlight-color-warning: #c60f0f;
+    --glass-btn-blur: blur(20px);
+    --glass-btn-saturation: saturate(180%);
+    --glass-btn-radius: 14px;
 
-  --text-color-main: #bfb4c4;
-  --text-color-secondary: #5b4965;
-  --text-color-tertiary: #583e85;
+    /* Button hover & active */
+    --glass-btn-hover-background:
+      radial-gradient(
+        circle at 25% 0%,
+        rgba(255, 255, 255, 0.27),
+        transparent 55%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.19),
+        rgba(180, 175, 205, 0.14)
+      );
 
-  --icons-color: brightness(0) saturate(100%) invert(82%) sepia(7%)
-    saturate(404%) hue-rotate(237deg) brightness(89%) contrast(89%);
+    --glass-btn-hover-shadow:
+      0 10px 28px rgba(0, 0, 0, 0.34), 0 3px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 1px rgba(255, 255, 255, 0.34),
+      inset 0 0 16px rgba(255, 255, 255, 0.055);
 
-  /* Liquid glass */
-  --glass-background:
-    radial-gradient(
-      circle at 20% 0%,
-      rgba(255, 255, 255, 0.14),
-      transparent 45%
-    ),
-    linear-gradient(
+    --glass-btn-active-background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.11),
       rgba(180, 175, 205, 0.08)
     );
 
-  --glass-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.38), 0 2px 8px rgba(0, 0, 0, 0.22),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22),
-    inset 0 0 20px rgba(255, 255, 255, 0.035);
-
-  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
-
-  --glass-blur: blur(28px);
-  --glass-saturation: saturate(160%);
-  --glass-radius: 24px;
-
-  /* Button */
-  --glass-btn-background:
-    radial-gradient(
-      circle at 25% 0%,
-      rgba(255, 255, 255, 0.22),
-      transparent 55%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.16),
-      rgba(180, 175, 205, 0.12)
-    );
-
-  --glass-btn-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.18),
-    inset 0 1px 1px rgba(255, 255, 255, 0.3),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.08),
-    inset 0 0 12px rgba(255, 255, 255, 0.045);
-
-  --glass-btn-border: 1px solid rgba(255, 255, 255, 0.24);
-
-  --glass-btn-blur: blur(20px);
-  --glass-btn-saturation: saturate(180%);
-  --glass-btn-radius: 14px;
-
-  /* Button hover & active */
-  --glass-btn-hover-background:
-    radial-gradient(
-      circle at 25% 0%,
-      rgba(255, 255, 255, 0.27),
-      transparent 55%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.19),
-      rgba(180, 175, 205, 0.14)
-    );
-
-  --glass-btn-hover-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.34), 0 3px 8px rgba(0, 0, 0, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.34),
-    inset 0 0 16px rgba(255, 255, 255, 0.055);
-
-  --glass-btn-active-background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.11),
-    rgba(180, 175, 205, 0.08)
-  );
-
-  --glass-btn-active-shadow:
-    0 3px 10px rgba(0, 0, 0, 0.28), inset 0 2px 3px rgba(0, 0, 0, 0.16),
-    inset 0 1px 1px rgba(255, 255, 255, 0.18);
+    --glass-btn-active-shadow:
+      0 3px 10px rgba(0, 0, 0, 0.28), inset 0 2px 3px rgba(0, 0, 0, 0.16),
+      inset 0 1px 1px rgba(255, 255, 255, 0.18);
+  }
 }
-
 *,
 ::before,
 ::after {
@@ -211,9 +223,24 @@
 html {
   font-size: 16px;
   line-height: 1.5;
+  font-family: var(--font-body);
+  letter-spacing: 2px;
 }
 
 body {
   background-color: var(--background-color-1);
   color: var(--text-color-main);
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-header), sans-serif;
 }

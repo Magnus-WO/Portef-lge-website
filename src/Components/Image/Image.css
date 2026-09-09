@@ -1,5 +1,5 @@
 .Image {
-  height: auto;
+  height: fit-content;
   width: 200px;
   box-shadow: var(--glass-shadow);
 }

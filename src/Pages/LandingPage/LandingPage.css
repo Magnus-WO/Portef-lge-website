@@ -8,18 +8,24 @@
 }
 
 .landingPageHeader {
-  margin: var(--space-lg) 0px;
+  /* margin: var(--space-lg) 0px; */
 }
 
 .landingPageInfoSection {
-  /* background-color: green; */
-
   font-size: var(--font-size-lg);
+  inline-size: min(860px, 96%);
+  margin-inline: auto;
+  position: relative;
 }
 
 .infoContainer {
   display: flex;
+  align-items: center;
   gap: var(--space-sm);
   margin-bottom: var(--space-lg);
-  /* background-color: aliceblue; */
+}
+@media screen and (max-width: 700px) {
+  .infoContainer {
+    flex-direction: column;
+  }
 }

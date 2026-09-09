@@ -15,7 +15,9 @@
   z-index: 1000;
 
   width: fit-content;
+  height: fit-content;
   padding: var(--space-xs) var(--space-md);
+  font-family: var(--font-header);
 
   ul {
     display: flex;
@@ -57,10 +59,9 @@
 @media screen and (max-width: 700px) {
   .Navbar {
     padding: var(--space-xs);
-    left: 90%;
+    left: 85%;
     position: fixed;
-    bottom: 10%;
-
+    bottom: 20%;
     ul {
       flex-direction: column;
       gap: var(--space-xs);

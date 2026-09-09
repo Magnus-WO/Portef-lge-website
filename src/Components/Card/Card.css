@@ -1,0 +1,17 @@
+.Card {
+  min-height: 420px;
+  padding: var(--space-md);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--glass-radius);
+
+  > * {
+    margin: 0;
+    text-align: center;
+  }
+}

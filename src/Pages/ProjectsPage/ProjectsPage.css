@@ -1,0 +1,38 @@
+.projectsPageContainer {
+  min-height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.projectsContainer {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+.projectCard {
+  img {
+    box-shadow: none;
+  }
+  a {
+    cursor: pointer;
+    color: var(--text-color-main);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and(max-width: 660px) {
+  .projectsContainer {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    }
+  }
+}
