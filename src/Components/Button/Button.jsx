@@ -9,21 +9,24 @@ export default function Button({ children, className = "", onClick }) {
     return localStorage.getItem("theme") || "light";
   });
   const [clicked, setClicked] = useState(false);
+  const [hasBeenClicked, setHasBeenClicked] = useState(false);
   const [buttonIcon, setButtonIcon] = useState();
   const [iconAltText, setIconAltText] = useState("");
 
   useEffect(() => {
-    document.body.setAttribute(`data-theme`, theme);
-    getButtonIcon();
-  }, []);
+    console.log("useEffect sier as hasBeenClicked er", hasBeenClicked);
 
-  useEffect(() => {
     setTheme((prevTheme) => {
-      const nextTheme = prevTheme === "light" ? "dark" : "light";
-      localStorage.setItem("theme", nextTheme);
-      document.body.setAttribute(`data-theme`, nextTheme);
-      return nextTheme;
+      if (hasBeenClicked === false) {
+        document.body.setAttribute("data-theme", theme);
+      } else {
+        const nextTheme = prevTheme === "light" ? "dark" : "light";
+        localStorage.setItem("theme", nextTheme);
+        document.body.setAttribute(`data-theme`, nextTheme);
+        return nextTheme;
+      }
     });
+    getButtonIcon();
 
     return () => {
       document.body.removeAttribute("data-theme");
@@ -31,8 +34,11 @@ export default function Button({ children, className = "", onClick }) {
   }, [clicked]);
 
   function handleChangeTheme() {
+    setHasBeenClicked(true);
+    console.log(hasBeenClicked);
+
     clicked === false ? setClicked(true) : setClicked(false);
-    getButtonIcon();
+    console.log("useState sier hasBeenClicked er", hasBeenClicked);
   }
 
   function getButtonIcon() {
