@@ -3,8 +3,8 @@ const projectsArray = [
     id: 1,
     name: "Diavola website",
     url: null,
-    img: null,
-    alt: "Bilde av forsiden til Diavola sin nettside, bygget med React og React Router.",
+    img: "/src/assets/images/diavola-website.png",
+    alt: "Bilde av forsiden til Diavola sin nettside, bygget med React, React Router og Firebase.",
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const projectsArray = [
     id: 3,
     name: "Expense tracker",
     url: null,
-    img: null,
-    alt: "Bilde av en expense tracker jeg bygget med React. Stylingen er ment å skulle etterligne en magisk fantasi-verden.",
+    img: "/src/assets/images/expense-tracker-screenshot.png",
+    alt: "Bilde av en expense tracker jeg bygget med React og Firebase. Stylingen er ment å skulle etterligne en magisk fantasi-verden.",
   },
 ];
 export default projectsArray;

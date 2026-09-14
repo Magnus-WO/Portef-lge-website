@@ -5,10 +5,9 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-}
 
-.landingPageHeader {
-  /* margin: var(--space-lg) 0px; */
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .landingPageInfoSection {

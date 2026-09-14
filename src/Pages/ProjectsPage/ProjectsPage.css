@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .projectsContainer {
@@ -17,7 +20,6 @@
 
 .projectCard {
   img {
-    box-shadow: none;
   }
   a {
     cursor: pointer;
