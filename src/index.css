@@ -28,7 +28,7 @@
   --font-body: patrickHand;
 
   [data-theme="light"] {
-    --background-color-1: #eae8e6;
+    --background-color-1: #d4d3d3;
     --background-color-opposite-theme: #2e293a;
     --highlight-background-color: #4969c1;
     --highlight-color: #dde0e6;
@@ -228,6 +228,7 @@ html {
 }
 
 body {
+  transition: 220ms ease-in;
   background-color: var(--background-color-1);
   color: var(--text-color-main);
 }
