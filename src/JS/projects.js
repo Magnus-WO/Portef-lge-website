@@ -2,7 +2,7 @@ const projectsArray = [
   {
     id: 1,
     name: "Diavola website",
-    url: "https://final-project-v25-793k39bw7-magnus-wos-projects.vercel.app/",
+    url: "https://final-project-v25.vercel.app/",
     img: "/images/diavola-website.png",
     alt: "Bilde av forsiden til Diavola sin nettside, bygget med React, React Router og Firebase.",
   },
